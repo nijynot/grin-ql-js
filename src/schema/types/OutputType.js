@@ -14,8 +14,8 @@ const { registerType } = require('../definitions/node');
 const OutputType = registerType(
   new GraphQLObjectType({
     name: 'Output',
-    description: 'An output.'
-    fields: ({
+    description: 'An output.',
+    fields: () =>  ({
       outputType: {
         type: new GraphQLNonNull(GraphQLString),
         resolve: ouput => output.output_type,

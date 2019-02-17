@@ -14,7 +14,7 @@ const { registerType } = require('../definitions/node');
 const HeaderType = registerType(
   new GraphQLObjectType({
     name: 'Header',
-    fields: ({
+    fields: () => ({
       hash: {
         type: new GraphQLNonNull(GraphQLString),
       },

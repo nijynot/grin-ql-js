@@ -14,7 +14,7 @@ const { registerType } = require('../definitions/node');
 const KernelType = registerType(
   new GraphQLObjectType({
     name: 'Kernel',
-    fields: ({
+    fields: () => ({
       features: {
         type: new GraphQLNonNull(GraphQLString),
       },

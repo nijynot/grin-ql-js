@@ -17,7 +17,7 @@ const KernelType = require('./KernelType');
 const BlockType = registerType(
   new GraphQLObjectType({
     name: 'Block',
-    fields: ({
+    fields: () => ({
       header: {
         type: HeaderType,
       },
